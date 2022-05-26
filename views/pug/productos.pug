@@ -1,0 +1,22 @@
+html
+    head 
+        title="Bianqui's productos"
+    body
+        h1="Productos"
+        if productos.length
+            table
+                thead
+                    th="Nombre"
+                    th="Precio"
+                    th="Foto"
+                tbody 
+                    each prod in productos
+                        tr 
+                            td=prod.name
+                            td=prod.price
+                            td
+                                img(style="width: 50px; height:50px" src=prod.photo)
+
+        else 
+            h2 No hay  productos
+        a(href="http://localhost:8080/form") Cargar productos

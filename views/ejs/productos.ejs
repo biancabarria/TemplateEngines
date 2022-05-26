@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bianqui's productos</title>
+</head>
+<body>
+    <h1>Productos</h1>
+    <hr />
+    <% if (productos.length) { %>
+        <table>
+            <thead>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Foto</th>
+            </thead>
+            <tbody>
+                <% productos.forEach((producto) => {  %>
+                    <tr>
+                        <td><%=producto.name %></td>
+                        <td><%=producto.price %></td>
+                        <td><img style="width: 50px; height:50px" src=<%=producto.photo %> alt=""></td>
+                    </tr>
+                <%})%> 
+            </tbody>
+        </table>
+    <% } else { %> 
+        <p>No hay datos</p>
+    <% } %> 
+    <button onclick="location.href = '/form';" id="myButton" class="float-left submit-button" >Add more products</button>
+</body>
+</html>

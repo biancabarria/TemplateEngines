@@ -1,0 +1,15 @@
+html
+    head 
+        title="Bianqui's entregable"
+    body
+        h1 Agregar productos
+        form(action="/productos" method="POST")
+            p
+                | Nombre: 
+                input(type='text', name='name', placeholder='Manzana')
+                | Precio: 
+                input(type='text', name='price', placeholder='19')
+                | Foto: 
+                input(type='text', name='photo', placeholder='URL')
+                button(type="submit") Send
+        a(href="http://localhost:8080/productos") Ver productos
